@@ -1,0 +1,324 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#a80000,#d61d1d,#e28b00);
+    min-height:100vh;
+    padding:30px;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    background:#f8f8f8;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:linear-gradient(to right,#b30000,#d41717);
+    border-bottom:5px solid #f0b434;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 35px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+
+    border:2px solid #f0c045;
+    border-radius:8px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-weight:700;
+    color:#ffd44f;
+}
+
+.logo span{
+    font-size:24px;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.badge{
+    background:white;
+    color:#b30000;
+    border-radius:50%;
+    padding:2px 7px;
+    font-size:12px;
+    margin-left:5px;
+    font-weight:600;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.profile img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:2px solid white;
+}
+
+/* ================= MAIN ================= */
+
+.main-content{
+    padding:35px;
+}
+
+/* ================= HEADER ================= */
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    font-size:42px;
+    color:#222;
+}
+
+.page-header p{
+    color:#666;
+    margin-top:5px;
+    font-size:16px;
+}
+
+.toggle-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.toggle-buttons button{
+    border:none;
+    padding:14px 22px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    background:#eee;
+    transition:0.3s;
+}
+
+.toggle-buttons button.active{
+    background:linear-gradient(to right,#b30000,#d61d1d);
+    color:white;
+}
+
+.toggle-buttons button:hover{
+    transform:translateY(-2px);
+}
+
+/* ================= FORM ================= */
+
+.form-container{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+.form-section,
+.upload-section{
+    background:white;
+    padding:28px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.form-section h2,
+.upload-section h2{
+    margin-bottom:25px;
+    color:#444;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:500;
+    color:#444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#d61d1d;
+}
+
+.full-width{
+    margin-top:20px;
+}
+
+textarea{
+    resize:none;
+    min-height:130px;
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+.cancel-btn{
+    background:#eee;
+    border:none;
+    padding:14px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.submit-btn{
+    background:linear-gradient(to right,#b30000,#d61d1d);
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    opacity:0.9;
+}
+
+/* ================= UPLOAD ================= */
+
+.upload-box{
+    border:2px dashed #ccc;
+    border-radius:12px;
+    padding:45px 20px;
+    text-align:center;
+}
+
+.upload-icon{
+    font-size:45px;
+    color:#c91b1b;
+    margin-bottom:15px;
+}
+
+.upload-box p{
+    margin-bottom:15px;
+    color:#555;
+}
+
+.upload-box button{
+    background:#d61d1d;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-bottom:12px;
+}
+
+.upload-box small{
+    color:#777;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+    .form-container{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .page-header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .buttons{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .submit-btn,
+    .cancel-btn{
+        width:100%;
+    }
+}
