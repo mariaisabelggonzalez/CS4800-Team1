@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Connect - Post Item</title>
+
+    <link rel="stylesheet" href="postitem.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">S</div>
+            <span>Campus Connect</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">My Posts</a>
+            <a href="#">Messages <span class="badge">3</span></a>
+
+            <div class="profile">
+                <img src="https://i.pravatar.cc/100?img=12">
+                <span>Welcome, John</span>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <div class="page-header">
+
+            <div>
+                <h1>Post an Item</h1>
+                <p>
+                    Submit a lost or found item to help your campus community
+                </p>
+            </div>
+
+            <div class="toggle-buttons">
+                <button class="active">🔺 Lost Item</button>
+                <button>✔ Found Item</button>
+            </div>
+
+        </div>
+
+        <!-- FORM CONTAINER -->
+        <div class="form-container">
+
+            <!-- LEFT -->
+            <div class="form-section">
+
+                <h2>📋 Item Details</h2>
+
+                <form>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Item Title *</label>
+                            <input type="text"
+                            placeholder="e.g. Lost iPhone near Library">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Category *</label>
+
+                            <select>
+                                <option>Select Category</option>
+                                <option>Phone</option>
+                                <option>Wallet</option>
+                                <option>Keys</option>
+                                <option>Laptop</option>
+                                <option>ID Card</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Date Lost/Found *</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Last Seen Location *</label>
+                            <input type="text"
+                            placeholder="e.g. Student Union, Library, Parking Lot">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Description *</label>
+
+                        <textarea
+                        placeholder="Describe the item (color, brand, features, etc.)"></textarea>
+                    </div>
+
+                    <div class="buttons">
+
+                        <button type="button" class="cancel-btn">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="submit-btn">
+                            🚀 Submit Post
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="upload-section">
+
+                <h2>📸 Upload Photos</h2>
+
+                <div class="upload-box">
+
+                    <div class="upload-icon">
+                        ⬆
+                    </div>
+
+                    <p>Drag & Drop Images Here</p>
+
+                    <button type="button">
+                        Browse Files
+                    </button>
+
+                    <small>
+                        Max 5MB • JPG, PNG
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
