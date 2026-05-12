@@ -1,0 +1,394 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#a80000,#c31414,#d43c00);
+    min-height:100vh;
+    padding:40px;
+    color:#222;
+}
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    background:#f5f5f5;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:linear-gradient(to right,#b30000,#d41717);
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    border-bottom:6px solid #f1b432;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-icon{
+    width:58px;
+    height:58px;
+    border-radius:12px;
+    border:3px solid #f1c04b;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    font-weight:700;
+    color:#ffd24a;
+}
+
+.logo h1{
+    font-size:42px;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:500;
+    position:relative;
+}
+
+.nav-links a.active::after{
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#fff;
+    border-radius:4px;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.profile img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid white;
+}
+
+.profile span{
+    font-size:20px;
+    font-weight:600;
+}
+
+/* ================= SEARCH ================= */
+
+.main-content{
+    padding:35px;
+}
+
+.search-section{
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.search-box{
+    width:70%;
+    display:flex;
+    overflow:hidden;
+    border-radius:10px;
+    background:white;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    padding:22px;
+    font-size:22px;
+    outline:none;
+}
+
+.search-box button{
+    width:90px;
+    border:none;
+    background:#d11414;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* ================= FILTERS ================= */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.filters button{
+    padding:14px 35px;
+    border:none;
+    border-radius:8px;
+    background:#ececec;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.filters button.active{
+    background:linear-gradient(to right,#ba0909,#d61d1d);
+    color:white;
+}
+
+.filters button:hover{
+    transform:translateY(-2px);
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:30px;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    border-right:2px solid #ddd;
+    padding-right:25px;
+}
+
+.action-btn{
+    width:100%;
+    padding:28px 20px;
+    border:none;
+    border-radius:10px;
+    margin-bottom:18px;
+    text-align:left;
+    font-size:28px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.action-btn:hover{
+    transform:translateY(-3px);
+}
+
+.lost-btn{
+    background:linear-gradient(to right,#bf0606,#db1b1b);
+    color:white;
+}
+
+.found-btn{
+    background:linear-gradient(to right,#efc13b,#f6d667);
+    color:#b40000;
+}
+
+/* ================= MESSAGES ================= */
+
+.messages{
+    margin-top:40px;
+}
+
+.messages h2{
+    margin-bottom:20px;
+    font-size:36px;
+    color:#333;
+}
+
+.message-card{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+    margin-bottom:18px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.08);
+}
+
+.message-card img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.message-card h4{
+    font-size:24px;
+}
+
+.message-card p{
+    color:#555;
+    font-size:18px;
+}
+
+.view-all{
+    text-align:right;
+    margin-top:10px;
+    color:#b30000;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* ================= ITEMS ================= */
+
+.items-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.panel h2{
+    font-size:42px;
+    margin-bottom:18px;
+    color:#c20d0d;
+}
+
+.item-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    display:flex;
+    margin-bottom:20px;
+    box-shadow:0 5px 12px rgba(0,0,0,0.1);
+}
+
+.item-image{
+    width:180px;
+    background:linear-gradient(135deg,#ffcb56,#cc0f0f);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.item-image img{
+    width:100%;
+    max-width:120px;
+}
+
+.item-info{
+    flex:1;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.item-info h3{
+    font-size:34px;
+    margin-bottom:5px;
+}
+
+.item-info p{
+    font-size:22px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+.item-info button{
+    width:180px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(to right,#b10808,#d61d1d);
+    color:white;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.item-info button:hover{
+    opacity:0.9;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        border-right:none;
+        border-bottom:2px solid #ddd;
+        padding-bottom:30px;
+    }
+
+    .items-grid{
+        grid-template-columns:1fr;
+    }
+
+    .search-box{
+        width:100%;
+    }
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .logo h1{
+        font-size:30px;
+    }
+
+    .item-card{
+        flex-direction:column;
+    }
+
+    .item-image{
+        width:100%;
+    }
+
+    .item-info h3{
+        font-size:26px;
+    }
+
+    .item-info p{
+        font-size:18px;
+    }
+}
