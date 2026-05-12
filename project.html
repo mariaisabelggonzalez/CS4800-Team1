@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Campus Connect - Lost & Found</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="project.css">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">S</div>
+            <h1>Campus Connect</h1>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">My Posts</a>
+            <a href="#">Messages</a>
+
+            <div class="profile">
+                <img src="https://i.pravatar.cc/100?img=12" alt="">
+                <span>Welcome, John</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <!-- SEARCH -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" placeholder="Search for lost or found items...">
+                <button>🔍</button>
+            </div>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="filters">
+            <button class="active">All Items</button>
+            <button>Lost Items</button>
+            <button>Found Items</button>
+            <button>Categories ▼</button>
+        </div>
+
+        <!-- DASHBOARD -->
+        <div class="dashboard">
+
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+
+                <button class="action-btn lost-btn">
+                    🔍 Report Lost Item
+                </button>
+
+                <a href="postitem.html" class="button-link">
+                <button class="action-btn found-btn">
+                ✔ Post Found Item
+                </button>
+                </a>
+
+                <!-- MESSAGES -->
+                <div class="messages">
+
+                    <h2>Direct Messages</h2>
+
+                    <div class="message-card">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="">
+                        <div>
+                            <h4>Sarah</h4>
+                            <p>Is this your ID card?</p>
+                        </div>
+                    </div>
+
+                    <div class="message-card">
+                        <img src="https://i.pravatar.cc/100?img=15" alt="">
+                        <div>
+                            <h4>Mike</h4>
+                            <p>I think I found your keys</p>
+                        </div>
+                    </div>
+
+                    <div class="view-all">
+                        View All ▼
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ITEMS -->
+            <div class="items-grid">
+
+                <!-- LOST ITEMS -->
+                <div class="panel">
+
+                    <h2>Recently Lost Items</h2>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png">
+                        </div>
+
+                        <div class="item-info">
+                            <div>
+                                <h3>Lost iPhone</h3>
+                                <p>Lost near Library</p>
+                            </div>
+
+                            <button>View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/639/639365.png">
+                        </div>
+
+                        <div class="item-info">
+                            <div>
+                                <h3>Black Wallet</h3>
+                                <p>Lost in Student Union</p>
+                            </div>
+
+                            <button>View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/483/483947.png">
+                        </div>
+
+                        <div class="item-info">
+                            <div>
+                                <h3>Set of Keys</h3>
+                                <p>Lost in Parking Lot</p>
+                            </div>
+
+                            <button>View Details</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FOUND ITEMS -->
+                <div class="panel">
+
+                    <h2>Recently Found Items</h2>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/821/821472.png">
+                        </div>
+
+                        <div class="item-info">
+                            <div>
+                                <h3>Found AirPods</h3>
+                                <p>Found in Cafeteria</p>
+                            </div>
+
+                            <button>View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+                        </div>
+
+                        <div class="item-info">
+                            <div>
+                                <h3>Stan State ID Card</h3>
+                                <p>Found in Gym</p>
+                            </div>
+
+                            <button>View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/179/179386.png">
+                        </div>
+
+                        <div class="item-info">
+                            <div>
+                                <h3>Silver Laptop</h3>
+                                <p>Found in Lecture Hall</p>
+                            </div>
+
+                            <button>View Details</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+// FILTER BUTTON ACTIVE STATE
+const filterButtons = document.querySelectorAll(".filters button");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+    });
+});
+
+// SEARCH FUNCTION
+const searchInput = document.querySelector(".search-box input");
+
+searchInput.addEventListener("keyup", function(){
+
+    const value = this.value.toLowerCase();
+
+    const cards = document.querySelectorAll(".item-card");
+
+    cards.forEach(card => {
+
+        const text = card.innerText.toLowerCase();
+
+        if(text.includes(value)){
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
