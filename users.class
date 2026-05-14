@@ -1,1 +1,141 @@
+import java.LocalDateTime
+
+public class user
+{
+    int userID;
+    String userName;
+    String userEmail;
+    String userPassword;
+    LocalDateTime userDateJoined;
+    int userMessageCount;
+    int userActiveLost;
+    int userActiveFound;
+
+    void setUserName (String name)
+    {
+        this.userName = name;
+    }
+
+    String getUserName ()
+    {
+        return this.userName;
+    }
+
+    void setUserEmail (String email)
+    {
+        this.userEmail = email;
+    }
+
+    String getUserEmail ()
+    {
+        return this.userEmail;
+    }
+
+    void setUserPassword (String hash)
+    {
+        this.userPassword = hash;
+    }
+
+    String getUserPassword ()
+    {
+        return this.userPassword;
+    }
+
+    void setUserDateJoined (LocalDateTime date)
+    {
+        this.userDateJoined = date;
+    }
+
+    LocalDateTime getUserDateJoined ()
+    {
+        return this.userDateJoined;
+    }
+
+    void setUserMessageCount (int count)
+    {
+        this.userMessageCount = count;
+    }
+
+    int getUserMessageCount ()
+    {
+        return this.userMessageCount;
+    }
+
+    void setUserActiveLost (int activeLost)
+    {
+        this.userActiveLost = activeLost;
+    }
+
+    int getUserActiveLost ()
+    {
+        return this.userActiveLost
+    }
+
+    void setUserActiveFound (int found)
+    {
+        this.userActiveFound = found;
+    }
+
+    int getUserActiveFound()
+    {
+        return this.userActiveFound;
+    }
+
+    boolean verifyPassword(String hash)
+    {
+        if hash = this.userPassword
+        {
+            return true;
+        } else
+            {
+                return false;
+            }
+    }
+
+    void incrementMessageCount()
+    {
+        this.userMessageCount = this.userMessageCount++;
+    }
+
+    void incrementActiveFound()
+    {
+        this.userActiveFound = this.userActiveFound++;
+    }
+
+    void incrementActiveLost()
+    {   
+        this.userActiveLost = this.userActiveLost++
+    }
+
+    void editMessage(int userID, int messageID)
+    {
+        if 
+    }
+} // ends class user
+
+public class moderator extends user
+{
+    void deleteMessage (int messageID)
+    {
+        // code to delete message from db
+    }
+
+    void tempBanUser (int userID)
+    {
+        // code to change tempban status in database for given user id
+    }
+} // ends class moderator
+
+public class admin extends moderator
+{
+    void assignModerator (int userID)
+    {
+        // change a users moderator status in db
+    }
+
+    void permBanUser (int userID)
+    {
+        // change user status to permban in db
+    }
+}
 
